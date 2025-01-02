@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.fragments.profile_settings.EditProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_edit_text_profile"
+                android:hint="Full name"
+                android:padding="20dp"
+                android:textColor="@color/greyscale_900"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edtNickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_edit_text_profile"
+                android:hint="Nickname"
+                android:padding="20dp"
+                android:textColor="@color/greyscale_900"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edtDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_edit_text_profile"
+                android:drawableEnd="@drawable/ic_picker_calendar"
+                android:hint="Date of Birth"
+                android:inputType="date"
+                android:padding="20dp"
+                android:textColor="@color/greyscale_900"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_edit_text_profile"
+                android:drawableEnd="@drawable/ic_picker_email"
+                android:hint="Email"
+                android:enabled="false"
+                android:inputType="textEmailAddress"
+                android:padding="20dp"
+                android:textColor="@color/greyscale_900"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_edit_text_profile"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:ccp_defaultNameCode="US"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="true"
+                    app:ccp_textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edtPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:padding="20dp"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:paddingVertical="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:layout_marginTop="50dp"
+                android:paddingVertical="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/on_button"
+                android:textSize="16sp"
+                android:backgroundTint="@color/bg_button"
+                app:cornerRadius="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

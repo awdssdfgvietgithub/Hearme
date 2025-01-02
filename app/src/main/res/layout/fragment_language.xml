@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.fragments.profile_settings.LanguageFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSuggested"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suggested"
+                android:textColor="@color/greyscale_900"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSuggested">
+
+                <RadioButton
+                    android:id="@+id/rdoUS"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="English (US)"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoUK"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="English (UK)"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+
+                <ImageView
+                    android:id="@+id/lineDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/line_divider" />
+
+                <TextView
+                    android:id="@+id/tvOthers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Others"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rdoMandarin"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="Mandarin"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoHindi"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="Hindi"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoSpanish"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="Spanish"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoFrench"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="French"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoArabic"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="Arabic"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoBengali"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="Bengali"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoRussian"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="Russian"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoIndonesia"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="40dp"
+                    android:buttonTint="@color/green_500"
+                    android:layoutDirection="rtl"
+                    android:text="Indonesia"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp" />
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

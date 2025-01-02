@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/item_nav_home"
+        android:name="com.app.hearme.view.fragments.homeactionmenu.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_trendingNowFragment"
+            app:destination="@id/trendingNowFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_popularArtistsFragment"
+            app:destination="@id/popularArtistsFragment" />
+        <action
+            android:id="@+id/action_item_nav_home_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_item_nav_home_to_viewDetailsArtistFragment"
+            app:destination="@id/viewDetailsArtistFragment" />
+        <action
+            android:id="@+id/action_item_nav_home_to_viewDetailsSongFragment"
+            app:destination="@id/viewDetailsSongFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.app.hearme.view.fragments.onboardingsignupsignin.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_walkThroughFragment"
+            app:destination="@id/walkThroughFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walkThroughFragment"
+        android:name="com.app.hearme.view.fragments.onboardingsignupsignin.WalkThroughFragment"
+        android:label="fragment_walk_through"
+        tools:layout="@layout/fragment_walk_through">
+        <action
+            android:id="@+id/action_walkThroughFragment_to_letYouInFragment"
+            app:destination="@id/letYouInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/letYouInFragment"
+        android:name="com.app.hearme.view.fragments.onboardingsignupsignin.LetYouInFragment"
+        android:label="fragment_let_you_in"
+        tools:layout="@layout/fragment_let_you_in">
+        <action
+            android:id="@+id/action_letYouInFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_letYouInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.app.hearme.view.fragments.onboardingsignupsignin.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_fillYourProfileFragment"
+            app:destination="@id/fillYourProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.app.hearme.view.fragments.onboardingsignupsignin.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_selectMethodFragment"
+            app:destination="@id/selectMethodFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_item_nav_home"
+            app:destination="@id/item_nav_home"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillYourProfileFragment"
+        android:name="com.app.hearme.view.fragments.accountssetup.FillYourProfileFragment"
+        android:label="FillYourProfileFragment"
+        tools:layout="@layout/fragment_fill_your_profile">
+        <action
+            android:id="@+id/action_fillYourProfileFragment_to_createNewPinFragment"
+            app:destination="@id/createNewPinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewPinFragment"
+        android:name="com.app.hearme.view.fragments.accountssetup.CreateNewPinFragment"
+        android:label="fragment_create_new_pin"
+        tools:layout="@layout/fragment_create_new_pin">
+        <action
+            android:id="@+id/action_createNewPinFragment_to_setFingerprintFragment"
+            app:destination="@id/setFingerprintFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setFingerprintFragment"
+        android:name="com.app.hearme.view.fragments.accountssetup.SetFingerprintFragment"
+        android:label="fragment_set_fingerprint"
+        tools:layout="@layout/fragment_set_fingerprint">
+        <action
+            android:id="@+id/action_setFingerprintFragment_to_followArtistsFragment"
+            app:destination="@id/followArtistsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.app.hearme.view.fragments.homeactionmenu.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/fragment_notification">
+        <action
+            android:id="@+id/action_notificationFragment_to_viewDetailsSongFragment"
+            app:destination="@id/viewDetailsSongFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_viewDetailsArtistFragment"
+            app:destination="@id/viewDetailsArtistFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_songPlayFragment"
+            app:destination="@id/songPlayFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_viewDetailsPodcastFragment"
+            app:destination="@id/viewDetailsPodcastFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_viewDetailsArtistOfPodcastFragment"
+            app:destination="@id/viewDetailsArtistOfPodcastFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/followArtistsFragment"
+        android:name="com.app.hearme.view.fragments.accountssetup.FollowArtistsFragment"
+        android:label="fragment_follow_artists"
+        tools:layout="@layout/fragment_follow_artists">
+        <action
+            android:id="@+id/action_followArtistsFragment_to_navigation_home"
+            app:destination="@id/item_nav_home"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectMethodFragment"
+        android:name="com.app.hearme.view.fragments.forgotandresetpassword.SelectMethodFragment"
+        android:label="fragment_select_method"
+        tools:layout="@layout/fragment_select_method">
+        <action
+            android:id="@+id/action_selectMethodFragment_to_fillOTPFragment"
+            app:destination="@id/fillOTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillOTPFragment"
+        android:name="com.app.hearme.view.fragments.forgotandresetpassword.FillOTPFragment"
+        android:label="fragment_fill_o_t_p"
+        tools:layout="@layout/fragment_fill_o_t_p">
+        <action
+            android:id="@+id/action_fillOTPFragment_to_createNewPasswordFragment"
+            app:destination="@id/createNewPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewPasswordFragment"
+        android:name="com.app.hearme.view.fragments.forgotandresetpassword.CreateNewPasswordFragment"
+        android:label="fragment_create_new_password"
+        tools:layout="@layout/fragment_create_new_password">
+        <action
+            android:id="@+id/action_createNewPasswordFragment_to_navigation_home"
+            app:destination="@id/item_nav_home"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/trendingNowFragment"
+        android:name="com.app.hearme.view.fragments.homeactionmenu.TrendingNowFragment"
+        android:label="TrendingNowFragment">
+        <action
+            android:id="@+id/action_trendingNowFragment_to_viewDetailsSongFragment"
+            app:destination="@id/viewDetailsSongFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularArtistsFragment"
+        android:name="com.app.hearme.view.fragments.homeactionmenu.PopularArtistsFragment"
+        android:label="PopularArtistsFragment">
+        <action
+            android:id="@+id/action_popularArtistsFragment_to_viewDetailsArtistFragment"
+            app:destination="@id/viewDetailsArtistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/item_nav_explore"
+        android:name="com.app.hearme.view.fragments.search.ExploreFragment"
+        android:label="ExploreFragment"
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_navigation_explore_to_itemExploreFragment"
+            app:destination="@id/itemExploreFragment" />
+        <action
+            android:id="@+id/action_item_nav_explore_to_viewDetailsSongFragment"
+            app:destination="@id/viewDetailsSongFragment"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_pop_enter_from_left"
+            app:popExitAnim="@anim/anim_pop_exit_to_right" />
+        <action
+            android:id="@+id/action_item_nav_explore_to_viewDetailsArtistFragment"
+            app:destination="@id/viewDetailsArtistFragment"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_pop_enter_from_left"
+            app:popExitAnim="@anim/anim_pop_exit_to_right" />
+        <action
+            android:id="@+id/action_item_nav_explore_to_viewDetailsArtistOfPodcastFragment"
+            app:destination="@id/viewDetailsArtistOfPodcastFragment"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_pop_enter_from_left"
+            app:popExitAnim="@anim/anim_pop_exit_to_right" />
+        <action
+            android:id="@+id/action_item_nav_explore_to_viewDetailsPodcastFragment"
+            app:destination="@id/viewDetailsPodcastFragment"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_pop_enter_from_left"
+            app:popExitAnim="@anim/anim_pop_exit_to_right" />
+        <action
+            android:id="@+id/action_item_nav_explore_to_viewDetailsProfileFragment"
+            app:destination="@id/viewDetailsProfileFragment"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_pop_enter_from_left"
+            app:popExitAnim="@anim/anim_pop_exit_to_right" />
+        <action
+            android:id="@+id/action_item_nav_explore_to_viewDetailsAlbumFragment"
+            app:destination="@id/viewDetailsAlbumFragment"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_pop_enter_from_left"
+            app:popExitAnim="@anim/anim_pop_exit_to_right" />
+        <action
+            android:id="@+id/action_item_nav_explore_to_allRecommendFragment"
+            app:destination="@id/allRecommendFragment"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_pop_enter_from_left"
+            app:popExitAnim="@anim/anim_pop_exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemExploreFragment"
+        android:name="com.app.hearme.view.fragments.ItemExploreFragment"
+        android:label="ItemExploreFragment"
+        tools:layout="@layout/fragment_item_explore">
+        <action
+            android:id="@+id/action_itemExploreFragment_to_navigation_explore"
+            app:destination="@id/item_nav_explore" />
+        <action
+            android:id="@+id/action_itemExploreFragment_to_topItemFragment"
+            app:destination="@id/topItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topItemFragment"
+        android:name="com.app.hearme.view.fragments.TopItemFragment"
+        android:label="fragment_top_item"
+        tools:layout="@layout/fragment_top_item" />
+    <fragment
+        android:id="@+id/podcastFragment"
+        android:name="com.app.hearme.view.fragments.PodcastFragment"
+        android:label="PodcastFragment" />
+    <fragment
+        android:id="@+id/item_nav_profile"
+        android:name="com.app.hearme.view.fragments.profile_settings.ProfileFragment"
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_item_nav_profile_to_profileDetailFragment"
+            app:destination="@id/profileDetailFragment" />
+        <action
+            android:id="@+id/action_item_nav_profile_to_securityFragment"
+            app:destination="@id/securityFragment" />
+        <action
+            android:id="@+id/action_item_nav_profile_to_audioVideoFragment"
+            app:destination="@id/audioVideoFragment" />
+        <action
+            android:id="@+id/action_item_nav_profile_to_languageFragment"
+            app:destination="@id/languageFragment" />
+        <action
+            android:id="@+id/action_item_nav_profile_to_dataSaverStorageFragment"
+            app:destination="@id/dataSaverStorageFragment" />
+        <action
+            android:id="@+id/action_item_nav_profile_to_settingPlaybackFragment"
+            app:destination="@id/settingPlaybackFragment2" />
+        <action
+            android:id="@+id/action_item_nav_profile_to_settingNotificationFragment"
+            app:destination="@id/settingNotificationFragment2" />
+        <action
+            android:id="@+id/action_item_nav_profile_to_premiumFragment"
+            app:destination="@id/premiumFragment" />
+        <action
+            android:id="@+id/action_item_nav_profile_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileDetailFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.ProfileDetailFragment"
+        android:label="fragment_profile_detail"
+        tools:layout="@layout/fragment_profile_detail">
+        <action
+            android:id="@+id/action_profileDetailFragment_to_item_nav_profile"
+            app:destination="@id/item_nav_profile" />
+        <action
+            android:id="@+id/action_profileDetailFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileDetailFragment"
+            app:destination="@id/profileDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.app.hearme.view.fragments.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/audioVideoFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.AudioVideoFragment"
+        android:label="fragment_audio_video"
+        tools:layout="@layout/fragment_audio_video" />
+    <fragment
+        android:id="@+id/dataSaverStorageFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.DataSaverStorageFragment"
+        android:label="fragment_data_saver_storage"
+        tools:layout="@layout/fragment_data_saver_storage" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" />
+    <fragment
+        android:id="@+id/securityFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.SecurityFragment"
+        android:label="fragment_security"
+        tools:layout="@layout/fragment_security" />
+    <fragment
+        android:id="@+id/settingNotificationFragment2"
+        android:name="com.app.hearme.view.fragments.profile_settings.SettingNotificationFragment"
+        android:label="fragment_setting_notification"
+        tools:layout="@layout/fragment_setting_notification" />
+    <fragment
+        android:id="@+id/settingPlaybackFragment2"
+        android:name="com.app.hearme.view.fragments.profile_settings.SettingPlaybackFragment"
+        android:label="fragment_setting_playback"
+        tools:layout="@layout/fragment_setting_playback" />
+    <fragment
+        android:id="@+id/premiumFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.PremiumFragment"
+        android:label="fragment_premium"
+        tools:layout="@layout/fragment_premium">
+        <action
+            android:id="@+id/action_premiumFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment">
+        <action
+            android:id="@+id/action_paymentFragment_to_addNewCardFragment"
+            app:destination="@id/addNewCardFragment" />
+        <action
+            android:id="@+id/action_paymentFragment_to_reviewSummaryFragment"
+            app:destination="@id/reviewSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewCardFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.AddNewCardFragment"
+        android:label="fragment_add_new_card"
+        tools:layout="@layout/fragment_add_new_card">
+        <action
+            android:id="@+id/action_addNewCardFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewDetailsSongFragment"
+        android:name="com.app.hearme.view.fragments.search.ViewDetailsSongFragment"
+        android:label="ViewDetailsSongFragment"
+        tools:layout="@layout/fragment_view_details_song">
+        <action
+            android:id="@+id/action_viewDetailsSongFragment_to_viewDetailsArtistFragment"
+            app:destination="@id/viewDetailsArtistFragment" />
+        <action
+            android:id="@+id/action_viewDetailsSongFragment_to_songPlayFragment"
+            app:destination="@id/songPlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewSummaryFragment"
+        android:name="com.app.hearme.view.fragments.profile_settings.ReviewSummaryFragment"
+        android:label="fragment_review_summary"
+        tools:layout="@layout/fragment_review_summary" />
+    <fragment
+        android:id="@+id/item_nav_library"
+        android:name="com.app.hearme.view.fragments.library.MyLibraryFragment"
+        android:label="MyLibraryFragment"
+        tools:layout="@layout/fragment_my_library">
+        <action
+            android:id="@+id/action_item_nav_library_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_item_nav_library_to_playListFragment"
+            app:destination="@id/playListFragment" />
+        <action
+            android:id="@+id/action_item_nav_library_to_downloadsFragment"
+            app:destination="@id/downloadsFragment" />
+        <action
+            android:id="@+id/action_item_nav_library_to_podcastLibraryFragment"
+            app:destination="@id/podcastLibraryFragment" />
+        <action
+            android:id="@+id/action_item_nav_library_to_albumsFragment"
+            app:destination="@id/albumsFragment" />
+        <action
+            android:id="@+id/action_item_nav_library_to_songFragment"
+            app:destination="@id/songFragment" />
+        <action
+            android:id="@+id/action_item_nav_library_to_artistsFragment"
+            app:destination="@id/artistsFragment" />
+        <action
+            android:id="@+id/action_item_nav_library_to_viewDetailsSongFragment"
+            app:destination="@id/viewDetailsSongFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.app.hearme.view.fragments.library.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/playListFragment"
+        android:name="com.app.hearme.view.fragments.library.PlayListFragment"
+        android:label="fragment_play_list"
+        tools:layout="@layout/fragment_play_list">
+        <action
+            android:id="@+id/action_playListFragment_to_playlistDetailFragment"
+            app:destination="@id/playlistDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playlistDetailFragment"
+        android:name="com.app.hearme.view.fragments.library.PlaylistDetailFragment"
+        android:label="fragment_playlist_detail"
+        tools:layout="@layout/fragment_playlist_detail">
+        <action
+            android:id="@+id/action_playlistDetailFragment_to_songPlayFragment"
+            app:destination="@id/songPlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadsFragment"
+        android:name="com.app.hearme.view.fragments.library.DownloadsFragment"
+        android:label="fragment_downloads"
+        tools:layout="@layout/fragment_downloads">
+        <action
+            android:id="@+id/action_downloadsFragment_to_songPlayFragment"
+            app:destination="@id/songPlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewDetailsArtistFragment"
+        android:name="com.app.hearme.view.fragments.search.ViewDetailsArtistFragment"
+        android:label="ViewDetailsArtistFragment"
+        tools:layout="@layout/fragment_view_details_artist">
+        <action
+            android:id="@+id/action_viewDetailsArtistFragment_to_viewDetailsSongFragment"
+            app:destination="@id/viewDetailsSongFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/podcastLibraryFragment"
+        android:name="com.app.hearme.view.fragments.library.PodcastLibraryFragment"
+        android:label="fragment_podcast_library"
+        tools:layout="@layout/fragment_podcast_library" />
+    <fragment
+        android:id="@+id/albumsFragment"
+        android:name="com.app.hearme.view.fragments.library.AlbumsFragment"
+        android:label="fragment_albums"
+        tools:layout="@layout/fragment_albums" />
+    <fragment
+        android:id="@+id/songFragment"
+        android:name="com.app.hearme.view.fragments.library.SongFragment"
+        android:label="fragment_song"
+        tools:layout="@layout/fragment_song">
+        <action
+            android:id="@+id/action_songFragment_to_songPlayFragment"
+            app:destination="@id/songPlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistsFragment"
+        android:name="com.app.hearme.view.fragments.library.ArtistsFragment"
+        android:label="fragment_artists"
+        tools:layout="@layout/fragment_artists" />
+    <fragment
+        android:id="@+id/viewDetailsArtistOfPodcastFragment"
+        android:name="com.app.hearme.view.fragments.search.ViewDetailsArtistOfPodcastFragment"
+        android:label="ViewDetailsArtistOfPodcastFragment"
+        tools:layout="@layout/fragment_view_details_artist_of_podcast">
+        <action
+            android:id="@+id/action_viewDetailsArtistOfPodcastFragment_to_viewDetailsPodcastFragment"
+            app:destination="@id/viewDetailsPodcastFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewDetailsPodcastFragment"
+        android:name="com.app.hearme.view.fragments.search.ViewDetailsPodcastFragment"
+        android:label="ViewDetailsPodcastFragment"
+        tools:layout="@layout/fragment_view_details_podcast" />
+    <fragment
+        android:id="@+id/viewDetailsProfileFragment"
+        android:name="com.app.hearme.view.fragments.search.ViewDetailsProfileFragment"
+        android:label="ViewDetailsProfileFragment"
+        tools:layout="@layout/fragment_view_details_profile">
+        <action
+            android:id="@+id/action_viewDetailsProfileFragment_to_followerDetailFragment"
+            app:destination="@id/followerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/followerDetailFragment"
+        android:name="com.app.hearme.view.fragments.search.FollowerDetailFragment"
+        android:label="fragment_follower_detail"
+        tools:layout="@layout/fragment_follower_detail" />
+    <fragment
+        android:id="@+id/songPlayFragment"
+        android:name="com.app.hearme.view.fragments.search.SongPlayFragment"
+        android:label="fragment_song_play"
+        tools:layout="@layout/fragment_song_play">
+        <action
+            android:id="@+id/action_songPlayFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabDownloadedFragment"
+        android:name="com.app.hearme.view.tab_viewpager.TabDownloadedFragment"
+        android:label="fragment_tab_downloaded"
+        tools:layout="@layout/fragment_tab_downloaded">
+        <action
+            android:id="@+id/action_tabDownloadedFragment_to_songPlayFragment"
+            app:destination="@id/songPlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabPodcastersFragment"
+        android:name="com.app.hearme.view.tab_viewpager.TabPodcastersFragment"
+        android:label="fragment_tab_podcasters"
+        tools:layout="@layout/fragment_tab_podcasters">
+        <action
+            android:id="@+id/action_tabPodcastersFragment_to_songPlayFragment"
+            app:destination="@id/songPlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabSongFragment"
+        android:name="com.app.hearme.view.tab_viewpager.TabSongFragment"
+        android:label="TabSongFragment">
+        <action
+            android:id="@+id/action_tabSongFragment_to_songPlayFragment"
+            app:destination="@id/songPlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabPodcastFragment"
+        android:name="com.app.hearme.view.tab_viewpager.TabPodcastFragment"
+        android:label="TabPodcastFragment">
+        <action
+            android:id="@+id/action_tabPodcastFragment_to_songPlayFragment"
+            app:destination="@id/songPlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewDetailsAlbumFragment"
+        android:name="com.app.hearme.view.fragments.search.ViewDetailsAlbumFragment"
+        android:label="ViewDetailsAlbumFragment"
+        tools:layout="@layout/fragment_view_details_album">
+        <action
+            android:id="@+id/action_viewDetailsAlbumFragment_to_viewDetailsArtistFragment"
+            app:destination="@id/viewDetailsArtistFragment" />
+        <action
+            android:id="@+id/action_viewDetailsAlbumFragment_to_viewDetailsSongFragment"
+            app:destination="@id/viewDetailsSongFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nowSongPlayingFragment"
+        android:name="com.app.hearme.view.fragments.search.NowSongPlayingFragment"
+        android:label="fragment_now_song_playing"
+        tools:layout="@layout/fragment_now_song_playing" />
+    <fragment
+        android:id="@+id/tabFollowFragment"
+        android:name="com.app.hearme.view.tab_viewpager.TabFollowFragment"
+        android:label="fragment_tab_follow"
+        tools:layout="@layout/fragment_tab_follow">
+        <action
+            android:id="@+id/action_tabFollowFragment_to_viewDetailsProfileFragment"
+            app:destination="@id/viewDetailsProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullImageFragment"
+        android:name="com.app.hearme.view.fragments.FullImageFragment"
+        android:label="FullImageFragment" />
+    <fragment
+        android:id="@+id/allRecommendFragment"
+        android:name="com.app.hearme.view.fragments.search.AllRecommendFragment"
+        android:label="AllRecommendFragment" />
+</navigation>

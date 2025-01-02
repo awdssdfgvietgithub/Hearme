@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="playlist"
+            type="com.app.hearme.model.Playlist" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            app:setImage="@{playlist.image}"
+            app:shapeAppearance="@style/roundedImageView" />
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="@{playlist.playlistName}"
+            android:textColor="@color/greyscale_900"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</layout>

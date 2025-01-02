@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="artist"
+            type="com.app.hearme.model.Artist" />
+
+        <variable
+            name="music"
+            type="com.app.hearme.model.Music" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.search.ViewDetailsPodcastFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:setImageUrl="@{artist.image}"
+                    app:shapeAppearanceOverlay="@style/roundedConorImageview" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{artist.artistName}"
+                        android:textColor="@color/greyscale_900"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:letterSpacing="0.02"
+                        android:text="@{artist.artistName}"
+                        android:textColor="@color/greyscale_700"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/urbanist_regular"
+                    android:letterSpacing="0.01"
+                    android:text="1 day ago"
+                    android:textColor="@color/greyscale_700"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:fontFamily="@font/urbanist_regular"
+                    android:letterSpacing="0.01"
+                    android:text="|"
+                    android:textColor="@color/greyscale_700"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/urbanist_regular"
+                    android:letterSpacing="0.01"
+                    android:text="48:26 mins"
+                    android:textColor="@color/greyscale_700"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@{music.musicName}"
+                android:textColor="@color/greyscale_900"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_continue_1"
+                        android:drawableStart="@drawable/ic_play_2"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/urbanist_bold"
+                        android:letterSpacing="0.01"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="8dp"
+                        android:text="Play"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:clickPlayForButton="@{music}" />
+
+                    <CheckBox
+                        android:id="@+id/cb_add_love_list"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/selector_love_check_box"
+                        android:buttonTint="@color/color_selector_check_box"
+                        android:checked="false"
+                        app:clickLoveList="@{music}"
+                        app:setLoveList="@{music}" />
+
+
+                    <CheckBox
+                        android:id="@+id/cb_add_playlist"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/selector_play_list_check_box"
+                        android:buttonTint="@color/color_selector_check_box"
+                        android:checked="false"
+                        app:clickQueueList="@{music}"
+                        app:setQueueList="@{music}" />
+
+                    <CheckBox
+                        android:id="@+id/cb_add_down_list"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/selector_download_check_box"
+                        android:buttonTint="@color/color_selector_check_box"
+                        android:checked="false"
+                        app:clickDownList="@{music}"
+                        app:setDownList="@{music}" />
+
+                    <LinearLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:adjustViewBounds="true"
+                            android:background="@color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_share" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <com.app.hearme.data.control.CustomSpinner
+                            android:id="@+id/spinner_drop_down_more"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_more"
+                            android:dropDownVerticalOffset="25dp"
+                            android:elevation="100dp"
+                            android:popupBackground="@drawable/bg_dropdown_song_more"
+                            android:spinnerMode="dropdown" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:justificationMode="inter_word"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:text="Shaquille O'Neal (@SHAQ) has been retired from basketball for years, but he’s still got his irons in plenty of fires. Here, we’ll discuss everything from superheroes to law enforcement to business to sports to podcasting to — yes — the Flat Earth Theory. What We Discuss with Shaquille O'Neal: The real-world experience Shaq endured preparing for a political race in 2020. How Shaq assembled what he calls The Panel to help manage not only his career but all his important life decisions — and how you can do the same. Why Shaq doesn’t consider himself a celebrity (and why that still isn’t a good reason to bug him in the middle of dinner). How Shaq manages his emotions so he stays non-reactive on and off the court. Does Shaq really believe in the Flat Earth Theory?"
+                android:textColor="@color/greyscale_800"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="chart"
+            type="com.app.hearme.model.Chart" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cardView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_bg_01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedConorImageview" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/urbanist_bold"
+            android:gravity="center"
+            android:text="@{chart.chartName}"
+            android:textColor="@color/on_button"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/cardView"
+            app:layout_constraintLeft_toLeftOf="@id/cardView"
+            app:layout_constraintRight_toRightOf="@id/cardView"
+            app:layout_constraintTop_toTopOf="@id/cardView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

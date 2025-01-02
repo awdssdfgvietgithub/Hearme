@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="text_hint">#CCCCCC</color>
+    <color name="on_button">#FFFFFF</color>
+    <color name="bg_button">#0E9E42</color>
+    <color name="green_100">#E6F9ED</color>
+    <color name="green_500">#06C149</color>
+    <color name="gradient_green">#33EB75</color>
+
+    <color name="orange">#FB9400</color>
+    <color name="purple">#9610FF</color>
+    <color name="red">#FF4D67</color>
+
+
+
+    <color name="color_txt_button_skip">#06C149</color>
+    <color name="color_txt_button_continue">#FFFFFF</color>
+
+    <color name="color_bg_button_skip">#E6F9ED</color>
+    <color name="color_bg_button_continue">#06C149</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_8percent">#06C14914</color>
+    <color name="transparent_9percent">#17000000</color>
+
+    <color name="greyscale_50">#FAFAFA</color>
+    <color name="greyscale_100">#F5F5F5</color>
+    <color name="greyscale_200">#EEEEEE</color>
+    <color name="greyscale_300">#E0E0E0</color>
+    <color name="greyscale_400">#BDBDBD</color>
+    <color name="greyscale_500">#9E9E9E</color>
+    <color name="greyscale_600">#757575</color>
+    <color name="greyscale_700">#616161</color>
+    <color name="greyscale_800">#424242</color>
+    <color name="greyscale_900">#212121</color>
+
+</resources>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="50dp">
+
+            <ImageView
+                android:id="@+id/lineDivider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="Change PIN"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineDivider" />
+
+            <ImageView
+                android:id="@+id/lineDividerBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/line_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <TextView
+                android:id="@+id/tvOldPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:fontFamily="@font/urbanist_medium"
+                android:text="Old PIN"
+                android:textColor="@color/greyscale_900"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineDividerBottom" />
+
+            <LinearLayout
+                android:id="@+id/layoutOldPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/tvOldPin">
+
+                <EditText
+                    android:id="@+id/edtOldNum_1"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_profile"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="50sp" />
+
+                <EditText
+                    android:id="@+id/edtOldNum_2"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_profile"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="50sp" />
+
+                <EditText
+                    android:id="@+id/edtOldNum_3"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_profile"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="50sp" />
+
+                <EditText
+                    android:id="@+id/edtOldNum_4"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_profile"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNewPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:fontFamily="@font/urbanist_medium"
+                android:text="New PIN"
+                android:textColor="@color/greyscale_900"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutOldPin" />
+
+            <LinearLayout
+                android:id="@+id/layoutNewPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tvNewPin">
+
+                <EditText
+                    android:id="@+id/edtNewNum_1"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_profile"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="50sp" />
+
+                <EditText
+                    android:id="@+id/edtNewNum_2"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_profile"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="50sp" />
+
+                <EditText
+                    android:id="@+id/edtNewNum_3"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_profile"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="50sp" />
+
+                <EditText
+                    android:id="@+id/edtNewNum_4"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_profile"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/green_100"
+                android:fontFamily="@font/urbanist_bold"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="18dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/bg_button"
+                android:textSize="16sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutNewPin" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnYes"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/green_500"
+                android:enabled="false"
+                android:fontFamily="@font/urbanist_bold"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="18dp"
+                android:text="Yes, Change"
+                android:textAllCaps="false"
+                android:textColor="@color/on_button"
+                android:textSize="16sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutNewPin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

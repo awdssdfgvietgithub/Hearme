@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="music"
+            type="com.app.hearme.model.Music" />
+
+        <variable
+            name="user"
+            type="com.app.hearme.model.User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewPodcast"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:setImageUrl="@{music.image}" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:fontFamily="@font/urbanist_bold"
+            android:gravity="center_vertical"
+            android:maxWidth="275dp"
+            android:text="@{music.musicName}"
+            android:textColor="@color/greyscale_900"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/cardViewPodcast"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNamePodcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="@{music.artist.artistName}"
+            android:textColor="@color/greyscale_700"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/cardViewPodcast"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="12sp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="I"
+            android:textColor="@color/greyscale_700"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/tvNamePodcast"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12sp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/urbanist_regular"
+            android:textColor="@color/greyscale_900"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/line"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:setDuration="@{music.duration}" />
+
+        <!--        android:src="@drawable/ic_light_heart"-->
+        <CheckBox
+            android:id="@+id/ic_heart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:button="@drawable/selector_love_check_box"
+            android:buttonTint="@color/color_selector_check_box"
+            android:checked="false"
+            app:clickLoveList="@{music}"
+            app:layout_constraintStart_toEndOf="@+id/cardViewPodcast"
+            app:layout_constraintTop_toBottomOf="@+id/tvDuration"
+            app:setLoveList="@{music}" />
+
+
+        <CheckBox
+            android:id="@+id/ic_add_playlist"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:button="@drawable/selector_play_list_check_box"
+            android:buttonTint="@color/color_selector_check_box"
+            android:checked="false"
+            app:clickQueueList="@{music}"
+            app:layout_constraintStart_toEndOf="@+id/ic_heart"
+            app:layout_constraintTop_toBottomOf="@+id/tvDuration"
+            app:setQueueList="@{music}" />
+        <!--            app:clickPlayList="@{music}"-->
+        <!--            app:setPlayList="@{music}" />-->
+
+        <CheckBox
+            android:id="@+id/ic_download"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:button="@drawable/selector_download_check_box"
+            android:buttonTint="@color/color_selector_check_box"
+            android:checked="false"
+            app:clickDownList="@{music}"
+            app:layout_constraintStart_toEndOf="@+id/ic_add_playlist"
+            app:layout_constraintTop_toBottomOf="@+id/tvDuration"
+            app:setDownList="@{music}" />
+
+        <com.app.hearme.data.control.CustomSpinner
+            android:id="@+id/spinner_drop_down_more"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/ic_more"
+            android:dropDownVerticalOffset="25dp"
+            android:elevation="100dp"
+            android:popupBackground="@drawable/bg_dropdown_song_more"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toEndOf="@+id/ic_download"
+            app:layout_constraintTop_toTopOf="@+id/ic_download" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_playing"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector_play_check_box"
+            android:button="@color/transparent"
+            android:checked="false"
+            app:clickPlayForCheckBox="@{music}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/spinner_drop_down_more"
+            app:setPlay="@{music}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

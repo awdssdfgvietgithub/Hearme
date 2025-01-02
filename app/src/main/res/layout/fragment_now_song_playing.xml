@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.fragments.search.NowSongPlayingFragment">
+
+    <data>
+
+        <variable
+            name="music"
+            type="com.app.hearme.model.Music" />
+
+        <variable
+            name="fragment"
+            type="androidx.fragment.app.Fragment" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/CustomCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="36dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                app:shapeAppearance="@style/roundedConorImageview2" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textColor="@color/greyscale_900"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/btnPlay"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/selector_play_check_box"
+                android:button="@color/transparent"
+                app:setPlay="@{music}"
+                app:clickPlayForCheckBox="@{music}"/>
+<!--                app:clickPlayForCheckBoxInMiniSizePlaying="@{music}"/>-->
+
+
+
+
+            <ImageView
+                android:id="@+id/btnNext"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_next" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

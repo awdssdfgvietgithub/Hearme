@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="32dp"
+        android:paddingTop="40dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="32dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="32dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image_circle_1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="135dp"
+                android:src="@drawable/ic_weak_circle"
+                app:layout_constraintBottom_toTopOf="@id/image_main_circle"
+                app:layout_constraintRight_toRightOf="@id/image_main_circle" />
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="74dp"
+                android:layout_marginBottom="13dp"
+                android:src="@drawable/ic_weak_circle"
+                app:layout_constraintBottom_toTopOf="@id/image_main_circle"
+                app:layout_constraintLeft_toRightOf="@id/image_circle_1" />
+
+            <ImageView
+                android:id="@+id/image_circle_2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_weak_circle"
+                app:layout_constraintLeft_toRightOf="@id/image_main_circle"
+                app:layout_constraintTop_toTopOf="@id/image_main_circle" />
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="73dp"
+                android:src="@drawable/ic_weak_circle"
+                app:layout_constraintLeft_toRightOf="@id/image_main_circle"
+                app:layout_constraintRight_toLeftOf="@id/image_circle_2"
+                app:layout_constraintTop_toBottomOf="@id/image_circle_2" />
+
+            <ImageView
+                android:id="@+id/image_circle_3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="123dp"
+                android:layout_marginEnd="2.93dp"
+                android:src="@drawable/ic_weak_circle"
+                app:layout_constraintRight_toLeftOf="@id/image_circle_2"
+                app:layout_constraintTop_toBottomOf="@id/image_circle_2" />
+
+            <ImageView
+                android:id="@+id/image_circle_4"
+                android:layout_width="2dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/ic_weak_circle"
+                app:layout_constraintRight_toLeftOf="@id/image_circle_3"
+                app:layout_constraintTop_toBottomOf="@id/image_main_circle" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="55dp"
+                android:src="@drawable/ic_weak_circle"
+                app:layout_constraintRight_toLeftOf="@id/image_circle_4"
+                app:layout_constraintTop_toBottomOf="@id/image_main_circle" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="108dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_weak_circle"
+                app:layout_constraintRight_toLeftOf="@id/image_main_circle"
+                app:layout_constraintTop_toBottomOf="@id/image_circle_1" />
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_weak_circle"
+                app:layout_constraintRight_toLeftOf="@id/image_circle_1"
+                app:layout_constraintTop_toBottomOf="@id/image_circle_1" />
+
+            <ImageView
+                android:id="@+id/image_main_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bg_ic_authorization"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_authorization"
+                app:layout_constraintBottom_toBottomOf="@id/image_main_circle"
+                app:layout_constraintLeft_toLeftOf="@id/image_main_circle"
+                app:layout_constraintRight_toRightOf="@id/image_main_circle"
+                app:layout_constraintTop_toTopOf="@id/image_main_circle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/urbanist_extrabold"
+                android:gravity="center"
+                android:letterSpacing="0.04"
+                android:text="Congratulations!"
+                android:textColor="@color/color_bg_button_continue"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:gravity="center"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:text="Your account is ready to use. You will be redirected to the Home page in a few seconds.."
+                android:textColor="@color/greyscale_900"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/progress_icon" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="music"
+            type="com.app.hearme.model.Music" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingTop="24dp"
+            android:paddingRight="24dp"
+            tools:context=".view.fragments.search.ViewDetailsSongFragment">
+
+            <!-- TODO: Update blank fragment layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_artist"
+                    style="@style/roundedConorImageview2"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:setImageUrl="@{music.image}"
+                    app:shapeAppearanceOverlay="@style/roundedConorImageview2" />
+
+                <TextView
+                    android:id="@+id/text_view_music_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/urbanist_extrabold"
+                    android:gravity="center"
+                    android:text="@{music.musicName}"
+                    android:textColor="@color/greyscale_900"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/text_view_artist_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/urbanist_medium"
+                    android:gravity="center"
+                    android:letterSpacing="0.01"
+                    android:text="@{music.artist.artistName}"
+                    android:textColor="@color/greyscale_800"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_view_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/urbanist_regular"
+                        android:letterSpacing="0.01"
+                        android:text="Song"
+                        android:textColor="@color/greyscale_700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:fontFamily="@font/urbanist_regular"
+                        android:letterSpacing="0.01"
+                        android:text="|"
+                        android:textColor="@color/greyscale_700"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_view_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/urbanist_regular"
+                        android:letterSpacing="0.01"
+                        android:text="03:50 mins"
+                        android:textColor="@color/greyscale_700"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_add_love_list"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="32dp"
+                            android:button="@drawable/selector_love_check_box"
+                            android:buttonTint="@color/color_selector_check_box"
+                            android:checked="false"
+                            app:clickLoveList="@{music}"
+                            app:setLoveList="@{music}" />
+
+
+                        <CheckBox
+                            android:id="@+id/cb_add_playlist"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="32dp"
+                            android:button="@drawable/selector_play_list_check_box"
+                            android:buttonTint="@color/color_selector_check_box"
+                            android:checked="false"
+                            app:clickQueueList="@{music}"
+                            app:setQueueList="@{music}" />
+
+                        <CheckBox
+                            android:id="@+id/cb_add_down_list"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="32dp"
+                            android:button="@drawable/selector_download_check_box"
+                            android:buttonTint="@color/color_selector_check_box"
+                            android:checked="false"
+                            app:clickDownList="@{music}"
+                            app:setDownList="@{music}" />
+
+                        <com.app.hearme.data.control.CustomSpinner
+                            android:id="@+id/spinner_drop_down_more"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_more"
+                            android:dropDownVerticalOffset="25dp"
+                            android:elevation="100dp"
+                            android:popupBackground="@drawable/bg_dropdown_song_more"
+                            android:spinnerMode="dropdown" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_continue_1"
+                        android:drawableLeft="@drawable/ic_play_2"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/urbanist_bold"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp"
+                        android:text="Play"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:clickPlayForButton="@{music}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@color/greyscale_200" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/urbanist_bold"
+                            android:text="More Like This"
+                            android:textColor="@color/greyscale_900"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/urbanist_semibold"
+                            android:letterSpacing="0.01"
+                            android:text="See All"
+                            android:textColor="@color/color_bg_button_continue"
+                            android:textSize="16sp"
+                            android:translationY="-4dp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_music_more_like_this"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="24dp"
+                        android:paddingBottom="24dp"
+                        tools:listitem="@layout/view_list_song" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

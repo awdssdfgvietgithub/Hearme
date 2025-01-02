@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "850807322896",
+    "project_id": "hearme-app-16567",
+    "storage_bucket": "hearme-app-16567.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850807322896:android:1362f7f2d74dfb2e348d95",
+        "android_client_info": {
+          "package_name": "com.app.hearme"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrxAyBDyDbEMZs8MEombARrvCcJk6x2oY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
